@@ -1,0 +1,32 @@
+
+body,
+#app{
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.layout{
+  display: grid;
+  grid-template-columns: 260px 1fr 260px;
+  grid-template-rows: 100vh;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+
+  height: 100vh;
+}
+
+.editor{
+  width: 600px;
+  height: 600px;
+}
+
+.preview-area{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  height: 100vh;
+}
