@@ -97,3 +97,33 @@ p{
 .corner-radius .el-input-number{
   width: 56px !important;
 }
+
+.logo-material{
+  padding: 30px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.logo-item{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.logo-item:hover{
+  background-color: #f0f0f0;
+}
+.text{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.el-button,
+.el-upload{
+  width: 100% !important;
+}

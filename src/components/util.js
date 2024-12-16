@@ -1,3 +1,7 @@
+import { Text, Rect, Polygon, Image } from "leafer-editor";
+import textImg from "../assets/text.svg"
+import rectImg from "../assets/rect.svg"
+import sjxImg from "../assets/sjx.svg"
 export function exportImg(canvas) {
   const img = canvas.toDataURL('image/png')
   const link = document.createElement('a');
@@ -87,3 +91,76 @@ function angleToFromTo(angle) {
   // Fallback in case of an invalid angle
   return { from: "center", to: "center" };
 }
+
+
+export const tools = [
+  {
+     name:"文字",
+     icon: textImg,
+     type: "text"
+  },
+  {
+    name: "矩形",
+    icon: rectImg,
+    type: "rect"
+  },
+  {
+    name: "三角形",
+    icon: sjxImg,
+    type: "sjx"
+  }
+]
+
+// 2ac40f
+
+export function createText(){
+   return new Text({
+    x:150,
+    y: 242,
+    text: "Hello World",
+    fontSize: 36,
+    color: "#2ac40f",
+    editable: true,
+    event:{
+      click:(e)=>{
+        console.log('click',e);
+      },
+      keydown:(e)=>{
+        console.log('keydown',e);
+      }
+    }
+  })
+}
+
+export function createRect(){
+  return new Rect({
+    x: 100,
+    y: 100,
+    width: 100,
+    height: 100,
+    stroke: "#2ac40f",
+    draggable: true,
+    editable: true
+  })
+}
+
+export function createSjx(){
+  return new Polygon({
+    x: 100,
+    y: 100,
+    points: [0, 0, 100, 100, 0, 100],
+    stroke: "#2ac40f",
+    draggable: true,
+    editable: true
+  })
+}
+
+export function createImage(url){
+  return new Image({
+    url:url,
+    width: 266,
+    height: 266,
+    editable: true,
+  })
+}
+
