@@ -38,7 +38,7 @@ p{
   margin: 0;
 }
 .tools-item{
-  border-top: 1px solid #fafafa;
+  border-top: 1px solid #ececec;
   padding: 10px;
   margin-top: 10px;
   font-size: 12px;
@@ -47,7 +47,6 @@ p{
 .bg-color{
   display: grid;
   grid-template-columns: repeat(4, 24px);
-  grid-template-rows: repeat(4, 24px);
   row-gap: 16px;
   justify-content: space-between;
 }
@@ -55,4 +54,46 @@ p{
 .color-item{
   border-radius: 4px;
   cursor: pointer;
+}
+
+
+.tools-item p{
+  margin-block: 10px;
+}
+
+.el-color-picker{
+  height: 24px !important;
+  margin-top: 16px;
+
+}
+.el-color-picker__trigger{
+  padding: 0 !important;
+  border: none !important;
+  width: 24px !important;
+  height: 24px !important;
+}
+
+.border{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.border .el-color-picker{
+  margin-top: 0 !important;
+}
+
+.el-input-number{
+  width: 112px !important;
+}
+
+.corner-radius{
+  display: grid;
+  grid-template-columns: repeat(2, 56px);
+  grid-template-rows: repeat(2, 56px);
+  gap: 10px;
+}
+
+.corner-radius .el-input-number{
+  width: 56px !important;
 }
